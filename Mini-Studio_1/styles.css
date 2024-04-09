@@ -1,0 +1,234 @@
+/* CSS Resets */
+* {
+    box-sizing: border-box;
+}
+
+img {
+    /* max-width: 100%;
+    display: block;
+    height: auto; */
+}
+
+/* Page styling */
+body {
+    background-color: #ededed;
+    color: rgb(241, 44, 225);
+    transition: all 2s;
+    font-family: fantasy;
+}
+
+body.switch {
+    background-color: rgb(0, 0, 0);
+    color: rgb(0, 255, 8);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif 
+}
+
+#container {
+    position: relative;
+    width: 100%;
+    max-width: 1366px;
+    /* make sure the columns don't get too small and text stays readable */
+    min-width: 900px;
+    margin: 1em auto;
+    padding-top: 2em;
+}
+
+header {
+    margin: 0 auto 2em auto;
+}
+
+#banner {
+    position: relative;
+    display: flex;
+    width: 1100px;
+    height: 250px;
+    margin: auto;
+    background-image: radial-gradient(circle, #ff8cfa, #f489fa, #e886fa, #dc83fa, #cf80fa, #ce7af9, #cd74f9, #cc6ef8, #d861f5, #e550f0, #f239ea, #ff00e2);
+    color: #333;
+    overflow: hidden;
+    display: grid;
+	place-items: center;
+    color: #fff;
+    text-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 21px #fff,
+      0 0 42px #bc13fe,
+      0 0 82px #bc13fe,
+      0 0 92px #bc13fe,
+      0 0 102px #bc13fe,
+      0 0 151px #bc13fe;
+      font-size: 6.2rem;
+    animation: pulsate 0.1s infinite alternate;  
+    border: 0.2rem solid #fff;
+    border-radius: 2rem;
+    padding: 0.4em;
+    box-shadow: 0 0 .2rem #fff,
+              0 0 .2rem #fff,
+              0 0 2rem #bc13fe,
+              0 0 0.8rem #bc13fe,
+              0 0 2.8rem #bc13fe,
+             inset 0 0 1.3rem #bc13fe;
+             transition: all 2s;
+    
+}
+              @keyframes pulsate {
+      
+    100% {
+  
+        text-shadow:
+        0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #fff,
+        0 0 40px #bc13fe,
+        0 0 80px #bc13fe,
+        0 0 90px #bc13fe,
+        0 0 100px #bc13fe,
+        0 0 150px #bc13fe;
+    
+    }
+    
+    0% {
+  
+      text-shadow:
+      0 0 2px #fff,
+      0 0 4px #fff,
+      0 0 6px #fff,
+      0 0 10px #bc13fe,
+      0 0 45px #bc13fe,
+      0 0 55px #bc13fe,
+      0 0 70px #bc13fe,
+      0 0 80px #bc13fe;
+  
+  }
+  
+  
+}
+
+#banner.switch {
+    background-image: radial-gradient(circle, #7cff00, #6ef71a, #5ff027, #51e830, #41e037, #39df38, #30de39, #24dd3a, #1fe236, #1ae832, #14ed2e, #0bf328);
+    color: rgb(235, 235, 235);
+    transition: all 2s;
+    text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #13fe4a,
+    0 0 82px #13fe4a,
+    0 0 92px #13fe4a,
+    0 0 102px #13fe4a,
+    0 0 151px #13fe4a;
+    font-size: 6.2rem;
+  animation: pulsate 0.1s infinite alternate;  
+  border: 0.2rem solid #fff;
+  border-radius: 2rem;
+  padding: 0.4em;
+  box-shadow: 0 0 .2rem #fff,
+            0 0 .2rem #fff,
+            0 0 2rem #13fe4a,
+            0 0 0.8rem #13fe4a,
+            0 0 2.8rem #13fe4a,
+            inset 0 0 1.3rem #13fe4a;
+        }
+
+            
+
+
+main {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1em auto;
+    
+}
+
+main section {
+    flex: 1;
+    border: 5px rgb(241,44,225) double;
+    margin: 0 .25em;
+    padding: 1em;
+    border-radius: 5px;
+    color: rgb(241, 44, 225);
+   
+}
+
+
+a {
+    text-decoration: none;
+}
+
+nav ol, nav ul {
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+section li {
+    padding-left: 1.2em;
+}
+
+section a {
+    line-height: 1.1em;
+    display: inline-block;
+    padding: .5em;
+    color: rgb(241, 44, 225);
+    border: 1px rgb(241, 44, 225) solid;
+}
+
+section a:hover {
+    background-color: rgb(241, 44, 225);
+    color: #ffffff;
+}
+
+section.switch a {
+    color: #1eff00;
+    border: 1px rgb(0, 255, 8) double;
+    
+
+}
+
+section.switch {
+    border: 5px rgb(0, 255, 8) double;
+    color: rgb(0, 255, 8)
+    
+    
+}
+
+section.switch a:hover {
+    background-color: #1eff00;
+    color: rgb(0, 0, 0);
+   
+}
+
+button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 12px;
+    background-color: rgb(255, 62, 184);
+    color: rgb(108, 0, 170);
+    border: 1px solid transparent;
+    border-color:rgb(108, 0, 170) ;
+    border-radius: 3px;
+}
+
+button:hover {
+    background-color: rgb(108, 0, 170);
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    border-color:rgb(241,44,225) ;
+    border-radius: 3px;
+}
+
+button.switch {
+    background-color: rgb(20, 73, 13);
+    border-color: #09b306;
+    color: white;
+    border-radius: 3px;
+}
+
+button.switch:hover {
+    background-color: #00fc3f;
+    color: rgb(43, 78, 9);
+    border-radius: 3px;
+}
+
