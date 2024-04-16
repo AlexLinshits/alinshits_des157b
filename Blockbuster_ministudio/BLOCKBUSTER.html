@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10+Charted&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example 5 - Loading</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: rgb(14, 14, 14);
+            font-family: "Jersey 10 Charted", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            color: antiquewhite;
+        }
+        
+        #myVideo {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            filter: invert(1);
+            
+        }
+        
+        #poem p {
+            position: absolute;
+            padding: 1em;
+            font-size: 2em;
+            font-family: "Jersey 10 Charted", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            transition: all 2.5s;
+        }
+        
+        #line1 {
+            bottom: 0%;
+            left: 0%;
+        }
+        
+        #line2 {
+            bottom: 10%;
+            left: 10%;
+        }
+        
+        #line3 {
+            bottom: 20%;
+            left: 20%;
+        }
+
+        #line4 {
+            top: 30%;
+            left: 30%;
+
+        }
+
+        #line5 {
+            top: 0%;
+            left: 0%;
+        }
+
+        #line6 {
+            top: 10%;
+            left: 10%;
+        }
+
+        #line7 {
+            top: 20%;
+            left: 20%;
+        }
+
+        #line8 {
+            top: 30%;
+            left: 30%;
+        }
+
+        #line9 {
+            bottom: 0%;
+            right: 0%;
+        }
+        
+        #line10 {
+            bottom: 10%;
+            right: 10%;
+        }
+        
+        #line11 {
+            bottom: 20%;
+            right: 20%;
+        }
+
+        #line12 {
+            top: 30%;
+            right: 30%;
+
+        }
+
+        #line13 {
+            top: 0%;
+            right: 0%;
+        }
+
+        #line14 {
+            top: 10%;
+            right: 10%;
+        }
+
+        #line15 {
+            top: 20%;
+            right: 20%;
+        }
+
+        #line16 {
+            top: 30%;
+            right: 30%;
+        }
+        
+        .fa-expand {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 36px;
+            color: orange;
+        }
+        
+        .fa-expand:hover {
+            cursor: pointer;
+        }
+        
+        .hidden {
+            opacity: 0;
+        }
+        
+        .showing {
+            opacity: 1;
+        }
+        /* add .fa-dove declarations here, and define the animation */
+
+        .fa-dove {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-size: 36px;
+        color: antiquewhite;
+        transform: translate(-50%, -50%);
+        animation: bird 2s infinite alternate ease-in-out;
+        }
+
+        @keyframes bird {
+            0% {
+                opacity: .5;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                opacity: .5;
+                transform: scale(1.5);
+            }
+        }
+
+
+    </style>
+
+</head>
+
+<body>
+    <video id="myVideo" muted autoplay loop playsinline>
+
+        <source src="video/IMG_4018.webm" type="video/webm">
+        <source src="video/IMG_4018.mp4" type="video/mp4">
+
+        <p>Your browser doesn't support HTML5 video. Here is a <a href="video/IMG_4018.mp4">link to the video</a>
+            instead.</p>
+    </video>
+    <i class="fas fa-expand"></i>
+
+    <!-- add the loading icon here -->
+    <i class="fa-solid fa-dove"></i>
+
+    <section id="poem">
+        <p id="line1" class="hidden">In realms where oceans vast do spread,</p>
+        <p id="line2" class="hidden">A small fish swims, its dreams ahead,</p>
+        <p id="line3" class="hidden">In waters deep, where giants roam,</p>
+        <p id="line4" class="hidden">It finds its place, its humble home.</p>
+        <p id="line5" class="hidden">Amidst the waves, it learns to glide,</p>
+        <p id="line6" class="hidden">With courage strong, it does abide,</p>
+        <p id="line7" class="hidden">Though currents fierce may toss and turn,</p>
+        <p id="line8" class="hidden">Its spirit bold, it shall not spurn.</p>
+        <p id="line9" class="hidden">Yet in this world, both grand and wide,</p>
+        <p id="line10" class="hidden">Where dreams can flourish or subside,</p>
+        <p id="line11" class="hidden">Humans too, like fragile bugs,</p>
+        <p id="line12" class="hidden">Navigate life's twists and tugs.</p>
+        <p id="line13" class="hidden">With wings so delicate, they soar,</p>
+        <p id="line14" class="hidden">Through skies of dreams, forever more,</p>
+        <p id="line15" class="hidden">Yet grounded by mortality's hold,</p>
+        <p id="line16" class="hidden">They weave their stories, brave and bold.</p>
+       
+    </section>
+
+    <script>
+        (function() {
+            'use strict';
+            console.log('reading');
+            const loading = document.querySelector('.fa-dove');
+            const myVideo = document.querySelector('#myVideo');
+            const fs = document.querySelector('.fa-expand');
+            // add the loading icon variable here
+            const line1 = document.querySelector('#line1');
+            const line2 = document.querySelector('#line2');
+            const line3 = document.querySelector('#line3');
+            const line4 = document.querySelector('#line4');
+            const line5 = document.querySelector('#line5');
+            const line6 = document.querySelector('#line6');
+            const line7 = document.querySelector('#line7');
+            const line8 = document.querySelector('#line8');
+            const line9 = document.querySelector('#line9');
+            const line10 = document.querySelector('#line10');
+            const line11 = document.querySelector('#line11');
+            const line12 = document.querySelector('#line12');
+            const line13 = document.querySelector('#line13');
+            const line14 = document.querySelector('#line14');
+            const line15 = document.querySelector('#line15');
+            const line16 = document.querySelector('#line16');
+            const poem = {
+                start: [0, 5, 8, 12, 14, 17, 20, 23, 26, 29, 32, 35, 38, 41, 44, 47],
+                stop: [4, 7, 10, 15, 18, 21, 24, 27, 30, 33, 36, 39, 42, 45, 48],
+                line: [line1, line2, line3, line4,line5, line6, line7, line8, line9, line10, line11, line12, line13, line14, line15, line16]
+            }
+
+            // add the loading icon script here
+            myVideo.addEventListener('playing', function() {
+            loading.style.display = 'none';
+            })
+
+
+            const intervalID = setInterval(checkTime, 1000);
+
+            function checkTime() {
+                for (let i = 0; i < poem.start.length; i++) {
+                    if (poem.start[i] < myVideo.currentTime && myVideo.currentTime < poem.stop[i]) {
+                        poem.line[i].className = "showing";
+                    } else {
+                        poem.line[i].className = "hidden";
+                    }
+                }
+            }
+
+            fs.addEventListener('click', function() {
+                // The fullscreenElement attribute returns null if the element is in windowed mode
+                if (!document.fullscreenElement) {
+                    // document.documentElement returns the Element that is a direct child of the document, the <html> element
+                    document.documentElement.requestFullscreen();
+                } else {
+                    document.exitFullscreen();
+                }
+            });
+        })();
+    </script>
+</body>
+
+</html>
