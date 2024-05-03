@@ -9,6 +9,7 @@ const editBtns = document.querySelectorAll(".fa-edit");
 const addFriendForm = document.getElementById("add-friend");
 const editFriendForm = document.getElementById("edit-friend");
 const friendList = document.querySelector('main ol');
+const inputs = document.querySelectorAll("#add-friend input:not([type=submit])");
 
 newBtn.addEventListener("click",function(event){
     event.preventDefault();
@@ -18,7 +19,38 @@ newBtn.addEventListener("click",function(event){
 addFriendForm.addEventListener("submit",function(event){
     event.preventDefault();
     addFriendForm.className = "add-friend-offscreen";
+    addFriend();
 });
+
+async function addFriend(){
+    const newFriend = {};
+}
+
+for (let i=0; i<inputs.lengths; i++) {
+    let key = inputs [i].getAttribute('name');
+    let value = inputs[i].value;
+    newFriend[key] = value; 
+}
+
+if(newFriend.fname != "" && newFriend.lname != "" && newFriend.email  !=""){
+    const newFriendData = new Parse.Object('Friends');
+    newFriendData.set('fname', newFriend.fname);
+    newFriendData.set('lname', newFriend.lname);
+    newFriendData.set('email', newFriend.email);
+    newFriendData.set('facebook', newFriend.facebook);
+    newFriendData.set('twitter', newFriend.twitter);
+    newFriendData.set('instagram', newFriend.instagram);
+    newFriendData.set('linkedin', newFriend.linkedin);
+
+    // add to B4A db
+    // update the DOM
+    // close the form
+} else {
+    addFriendForm.className = "add-friend-offscreen";
+}
+
+if(newFriend.fname != "" && newFriend.lname != "" && newFriend.email != "")
+    
 
 for (let i=0; i<editBtns.length;i++){
     editBtns[i].addEventListener("click",function(event){
