@@ -1,10 +1,11 @@
 [
   {
     "Day": "Monday",
-    "Exercise": "Calisthenics",
+    "Exercise": "Football",
     "Intensity": "Medium",
     "Duration": "90mins",
-    "Enjoyment": "Loved It"
+    "Enjoyment": "Joga Bonito"
+    
   },
 
   {
@@ -12,7 +13,8 @@
     "Exercise": "Weightlifting",
     "Intensity": "Extreme",
     "Duration": "90mins",
-    "Enjoyment": "Yummy" 
+    "Enjoyment": "Yummy"
+    
   },
   {
     "Day": "Wednesday",
@@ -20,6 +22,7 @@
     "Intensity": "Light-Medium",
     "Duration": "60mins",
     "Enjoyment": "Can't believe I like running"
+    
   },
 
   {
@@ -28,6 +31,7 @@
     "Intensity": "Medium",
     "Duration": "120mins",
     "Enjoyment": "SHARMS BABY!"
+   
   },
 
   {
@@ -36,6 +40,7 @@
     "Intensity": "None",
     "Duration": "All Day",
     "Enjoyment": "Duh"
+   
   },
 
   {
@@ -44,6 +49,7 @@
     "Intensity": "Hard",
     "Duration": "60mins",
     "Enjoyment": "Scary but so fun"
+    
   },
 
   {
@@ -52,5 +58,6 @@
     "Intensity": "Hard",
     "Duration": "90mins",
     "Enjoyment": "Longest I ever ran"
+    
   }
 ]

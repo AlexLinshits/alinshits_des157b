@@ -1,6 +1,31 @@
 .item {
-  border: 1px solid #ccc;
+  display: inline-block;
+  border: 6px double #ff9e02;
   padding: 10px;
   margin-bottom: 10px;
-  background-color: #f9f9f9;
+  background: rgb(156,30,184);
+background: radial-gradient(circle, rgba(156,30,184,1) 0%, rgba(30,36,186,0.9836528361344538) 100%);
+  font-family: "Pirata One";
+  margin: 100px;
+  color: antiquewhite;
+  border-radius: 10px;
+}
+
+body {
+  background-color: rgb(26, 25, 25);
+  border: 6px double #ff9e02; 
+  margin: 60px;
+  border-radius: 10px;
+  
+}
+
+#header {
+  
+}
+
+h1{
+  color: antiquewhite;
+  font-family: "Pirata One";
+  text-align: center;
+  
 }
