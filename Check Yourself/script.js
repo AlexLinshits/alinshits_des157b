@@ -11,20 +11,20 @@ fetch('products.json')
         div.classList.add('item'); 
 
         div.innerHTML = `
-        <p><strong>Day:</strong> ${item.Day}</p>
+        <div class = "card"><p><strong>Day:</strong> ${item.Day}</p>
         <p><strong>Exercise:</strong> ${item.Exercise}</p>
         <p><strong>Intensity:</strong> ${item.Intensity}</p>
         <p><strong>Duration:</strong> ${item.Duration}</p>
-        <p><strong>Enjoyment:</strong> ${item.Enjoyment}</p>
+        <p><strong>Enjoyment:</strong> ${item.Enjoyment}</p></div>
       `;
 
       document.body.appendChild(div);
     });
     // Data loaded successfully, you can use it here
-//     console.log(data); // Display data in console for verification
-//   })
-//   .catch(error => {
-//     console.error('Error loading the JSON file:', error);
+    console.log(data); // Display data in console for verification
+  })
+  .catch(error => {
+    console.error('Error loading the JSON file:', error);
 
   });
 

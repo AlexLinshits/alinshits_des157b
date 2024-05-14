@@ -3,12 +3,12 @@
   border: 6px double #ff9e02;
   padding: 10px;
   margin-bottom: 10px;
-  background: rgb(156,30,184);
-background: radial-gradient(circle, rgba(156,30,184,1) 0%, rgba(30,36,186,0.9836528361344538) 100%);
-  font-family: "Pirata One";
+  background: rgb(23, 12, 114);
+  font-family: "Courier";
   margin: 100px;
   color: antiquewhite;
   border-radius: 10px;
+  width: 300px;
 }
 
 body {
@@ -28,4 +28,8 @@ h1{
   font-family: "Pirata One";
   text-align: center;
   
+}
+
+#card{
+  width: 200px;
 }
