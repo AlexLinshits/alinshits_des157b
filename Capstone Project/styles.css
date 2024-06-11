@@ -1,0 +1,306 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.background-image {
+    background-image: url('images/header.png'); /* Replace 'your-image.jpg' with the path to your background image */
+    height: 100%;
+    width: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.background-image1 {
+    background-image: url('images/utopia.webp'); /* Replace 'your-image.jpg' with the path to your background image */
+    height: 100%;
+    width: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0); /* Semi-transparent background color */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    color: rgb(255, 254, 249);
+}
+
+.title {
+    font-size: 2em;
+    margin: 0 0 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+}
+
+.text {
+    font-size: 1.2em;
+    margin: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding:10px 0;
+    z-index: 1000;
+    text-align: center;
+}
+
+header h1 {
+    margin: 100px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    margin-top: 100px; /* Adjust this value based on the height of your header */
+    padding: 0px;
+}
+
+section {
+    margin-bottom: 0px;
+}
+
+#content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.column {
+    width: 30%;
+    padding: 10px;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+}
+
+h1{
+    text-align: center;
+   
+}
+
+#side {
+    font-size: 25px;
+    justify-content: center;
+}
+
+.carousel {
+    position: relative;
+    width: 80%;
+    overflow: hidden;
+}
+
+.slideshow {
+    margin-top: 60px; /* height of header */
+    height: 100vh;
+    width: auto;
+    overflow-y: auto;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+.slide {
+    height: 100vh;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+    padding: 20px;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: opacity 0.75s ease-in-out; /* Smooth transition for opacity */
+    background-color: #232020;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.slide-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    padding: 20px;
+    background-color: #232020;
+    border-radius: 10px;
+}
+
+ .slide h1, .slide h2, .slide h3 {
+    margin: 10px 0;
+    color: #ffffff;
+   
+} 
+
+.slide h1 {
+font-size: xx-large;
+}
+
+.slide p {
+    margin: 100px 0;
+    color: #232020;
+    line-height: 1.6;
+    font-size:x-large ;
+}
+
+.slide img {
+    display: flex;
+    max-width: 100%;
+    height: auto;
+    margin: 10px 0;
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+   
+}
+
+.slide .images {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    border-radius: 15px;
+   
+}
+
+.slide .links p {
+    margin: 5px 0;
+}
+
+.slide a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.slide a:hover {
+    text-decoration: underline;
+}
+
+.slide.active {
+    opacity: 1; /* Make active slides visible */
+    transform: scale(1.02); /* Slightly enlarge active slides */
+    transition: transform 0.5s ease-in-out;
+    background-color: #232020;
+    
+}
+
+.carousel-track-container {
+    display: flex;
+    transition: transform 0.5s ease-in;
+}
+
+.carousel-track {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.carousel-slide {
+    min-width: 550px;
+    margin-right: 10px;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.carousel-button-left {
+    left: 10px;
+}
+
+.carousel-button-right {
+    right: 10px;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 600px;
+    height: 650px;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    border-radius: 10px;
+    
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 1.2s;
+    transform-style: preserve-3d;
+    border-radius: 10px;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    border-radius: 10px;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    background-color: #F9FFF9;
+    color: black;
+    border-radius: 10px;
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+    background-color: rgb(255, 255, 255);
+    color: white;
+    transform: rotateY(180deg);
+    border-radius: 10px;
+  }
